@@ -1,7 +1,7 @@
 import React from 'react';
 
-const StudentRow = ({ student }) => {
-  return (
+const StudentRow = ({ student, onDetailsClick }) => {
+    return (
     <tr>
       <td>{student.id}</td>
       <td>{student.name}</td>
@@ -10,8 +10,9 @@ const StudentRow = ({ student }) => {
       <td>{student.examGrade}</td>
       <td>{student.finalGrade}</td>
       <td>{student.status}</td>
-      <td><button>Details</button></td> {/* Optional */}
-    </tr>
+      <td>
+        <button onClick={() => onDetailsClick(student)}>Details</button>
+      </td>    </tr>
   );
 }
 

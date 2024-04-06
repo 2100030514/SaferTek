@@ -3,7 +3,9 @@ import React from 'react';
 const DetailsBlock = ({ selectedStudent }) => {
   return (
     <div className="details-block">
-      {/* Display details of selected student */}
+      <h2>Details</h2>
+      <p>{`Name: ${selectedStudent.name}`}</p>
+      {/* Add other details */}
     </div>
   );
 }
